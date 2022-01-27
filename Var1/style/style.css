@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+  height: 75px;
+  background-color: #25378f;
+  text-align: center;
+}
+
+.header_name {
+  margin: 0;
+  color: white;
+  padding-top: 15px;
+}
+
+.main {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.main_foto {
+  text-align: center;
+}
+
+.foto {
+  border: 10px solid #b3ab08;
+  border-radius: 10px/20px;
+  margin-top: 15px;
+}
+
+.end {
+  padding-bottom: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.main_block_loading {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.input1 {
+  background-color: rgb(114, 92, 92);
+  color: aliceblue;
+  margin: 0;
+}
+
+.input2 {
+  background-color: rgb(116, 40, 40);
+  color: aliceblue;
+  margin: 0;
+}
