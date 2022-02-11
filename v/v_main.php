@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,19 +6,18 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="v/style.css" /> 	
 </head>
 <body>
-	<div id="header">
+	<div style="text-align: center" id="header">
 		<h1><?= $title ?></h1>
 	</div>
 	
-	<div id="menu">
-		<a href="index.php">На главную</a> | 
-		<a href="index.php?c=page&act=edit">Редактировать</a> | 
+	<div style="text-align: center; display: flex; justify-content: space-around;" id="menu">
+		<a style="text-decoration: none; font-family: fantasy; font-size: 20px; letter-spacing: 5px;" href="index.php">Каталог</a> | 
 		<?php if ($user) {
-      echo '<a href="index.php?c=user&act=info">Личный кабинет</a> | <a href="index.php?c=user&act=logout">Выйти(' .
+      echo '<a style="text-decoration: none; font-family: fantasy; font-size: 20px; letter-spacing: 5px;" href="index.php?c=user&act=info">Личный кабинет</a> | <a style="text-decoration: none; font-family: fantasy; font-size: 20px; letter-spacing: 5px;" href="index.php?c=bascet&act=myGoods">Корзина</a> | <a style="text-decoration: none; font-family: fantasy; font-size: 20px; letter-spacing: 5px;" href="index.php?c=user&act=logout">Выйти (' .
           $user .
           ')</a>';
   } else {
-      echo '<a href="index.php?c=user&act=login">Войти</a> | <a href="index.php?c=user&act=reg">Регистрация</a>';
+      echo '<a style="text-decoration: none; font-family: fantasy; font-size: 20px; letter-spacing: 5px;" href="index.php?c=user&act=login">Войти</a> | <a style="text-decoration: none; font-family: fantasy; font-size: 20px; letter-spacing: 5px;" href="index.php?c=user&act=reg">Регистрация</a>';
   } ?>
 	</div>
 	
@@ -28,7 +25,7 @@
 		<?= $content ?>
 	</div>
 	
-	<div id="footer">
+	<div style="text-align: center" id="footer">
 		Мой Сайт
 	</div>
 </body>

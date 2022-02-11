@@ -14,7 +14,7 @@ abstract class C_Base extends C_Controller
 
     protected function before()
     {
-        $this->title = 'Сайт';
+        $this->title = 'Сайт::';
         $this->content = '';
     }
 

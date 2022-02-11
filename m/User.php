@@ -1,24 +1,15 @@
 <?php
+include_once "config/DB.php";
 
-class User
-{
+class User extends DB{
     public $user_id, $user_login, $user_name, $user_password;
-    private $connect;
 
-    public function __construct()
-    {
-        $this->connect = $this->connecting();
-    }
 
     public function pass($name, $password)
     {
         return strrev(md5($name)) . md5($password);
     }
 
-    public function connecting()
-    {
-        return mysqli_connect('localhost', 'root', 'root', 'test');
-    }
 
     public function get($id)
     {
@@ -62,7 +53,7 @@ class User
                     $this->pass($data['name'], strip_tags($password))
                 ) {
                     $_SESSION['user_id'] = $data['id'];
-                    return 'Добро пожаловать в систему, ' . $data['name'] . '!';
+                    return 'Добро пожаловать, ' . $data['name'] . '!';
                 } else {
                     return 'Пароль не верный!';
                 }

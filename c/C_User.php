@@ -9,7 +9,7 @@ class C_User extends C_Base
         $get_user = new User();
         $user_info = $get_user->get($_SESSION['user_id']);
         while ($data = mysqli_fetch_assoc($user_info)) {
-            $this->title .= '::' . $data['name'];
+            $this->title .= $data['name'];
             $this->content = $this->Template('v/u_info.php', [
                 'username' => $data['name'],
                 'userlogin' => $data['login'],
@@ -37,7 +37,7 @@ class C_User extends C_Base
 
     public function action_login()
     {
-        $this->title .= '::Вход';
+        $this->title .= 'Вход';
         $this->content = $this->Template('v/u_login.php', []);
 
         if ($this->isPost()) {
@@ -53,7 +53,7 @@ class C_User extends C_Base
     {
         $logout = new User();
         $result = $logout->logout();
-        return $result;
+        return header("Location: index.php");
     }
 }
 ?>
