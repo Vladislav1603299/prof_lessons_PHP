@@ -3,7 +3,6 @@ include_once 'c/C_User.php';
 include_once 'c/C_Goods.php';
 include_once 'c/C_Bascet.php';
 
-
 $action = 'action_';
 $action .= isset($_GET['act']) ? $_GET['act'] : 'index';
 
@@ -17,9 +16,6 @@ if (isset($_GET['c'])) {
     }
 } else {
     $controller = new C_Goods();
-};
-
-
+}
 
 $controller->Request($action);
-

@@ -53,7 +53,7 @@ class C_User extends C_Base
     {
         $logout = new User();
         $result = $logout->logout();
-        return header("Location: index.php");
+        return header('Location: index.php');
     }
 }
 ?>

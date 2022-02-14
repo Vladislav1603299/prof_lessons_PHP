@@ -1,6 +1,7 @@
 <?php
 
-class DB{
+class DB
+{
     protected $connect;
 
     public function __construct()
